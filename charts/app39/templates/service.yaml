@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app39-service
+spec:
+  selector:
+    app: app39
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

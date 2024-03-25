@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app9-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app9
+  template:
+    metadata:
+      labels:
+        app: app9
+    spec:
+      containers:
+      - name: app9-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

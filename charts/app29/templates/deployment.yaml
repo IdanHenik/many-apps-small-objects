@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app29-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app29
+  template:
+    metadata:
+      labels:
+        app: app29
+    spec:
+      containers:
+      - name: app29-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

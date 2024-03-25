@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app32-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app32
+  template:
+    metadata:
+      labels:
+        app: app32
+    spec:
+      containers:
+      - name: app32-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

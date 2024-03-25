@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app21-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app21
+  template:
+    metadata:
+      labels:
+        app: app21
+    spec:
+      containers:
+      - name: app21-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

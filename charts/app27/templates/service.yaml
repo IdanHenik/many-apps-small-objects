@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app27-service
+spec:
+  selector:
+    app: app27
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

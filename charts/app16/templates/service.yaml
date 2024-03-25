@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app16-service
+spec:
+  selector:
+    app: app16
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

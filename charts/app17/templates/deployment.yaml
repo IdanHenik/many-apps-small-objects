@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app17-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app17
+  template:
+    metadata:
+      labels:
+        app: app17
+    spec:
+      containers:
+      - name: app17-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

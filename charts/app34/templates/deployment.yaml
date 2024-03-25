@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app34-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app34
+  template:
+    metadata:
+      labels:
+        app: app34
+    spec:
+      containers:
+      - name: app34-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

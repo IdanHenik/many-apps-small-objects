@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app6-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app6
+  template:
+    metadata:
+      labels:
+        app: app6
+    spec:
+      containers:
+      - name: app6-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

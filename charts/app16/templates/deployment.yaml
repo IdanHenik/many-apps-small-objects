@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app16-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app16
+  template:
+    metadata:
+      labels:
+        app: app16
+    spec:
+      containers:
+      - name: app16-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app40-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app40
+  template:
+    metadata:
+      labels:
+        app: app40
+    spec:
+      containers:
+      - name: app40-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

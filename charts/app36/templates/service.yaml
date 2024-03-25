@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app36-service
+spec:
+  selector:
+    app: app36
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

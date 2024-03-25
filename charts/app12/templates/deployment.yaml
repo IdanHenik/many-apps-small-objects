@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app12-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app12
+  template:
+    metadata:
+      labels:
+        app: app12
+    spec:
+      containers:
+      - name: app12-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

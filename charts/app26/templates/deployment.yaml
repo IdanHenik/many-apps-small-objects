@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app26-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app26
+  template:
+    metadata:
+      labels:
+        app: app26
+    spec:
+      containers:
+      - name: app26-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80

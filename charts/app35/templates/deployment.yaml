@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app35-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app35
+  template:
+    metadata:
+      labels:
+        app: app35
+    spec:
+      containers:
+      - name: app35-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
